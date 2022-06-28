@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <style>
+            div{
+                display: flex;
+            }
+            div span{
+                display: inline-block;
+                background-color:rgba(187, 6, 6, 0.7);
+                /* font-size: 10rem; */
+            }
+            p{
+                margin-left: 27%;
+                color: aliceblue;
+                font-size: 20px;
+            }
+            .footer{
+                background-color: #49cc9a;
+            }
+            form,h1{
+                margin-left: 5%;
+                margin-top: 5%;
+            }
+            input[type=text] {
+                    font-size: 20px;
+                    padding: 8px;
+                    border: none;
+                    border-bottom: 2px solid black;
+                    background-color:rgba(0,0,0,0.4);
+                    color: aliceblue;
+                    max-width: 150px;
+                    size: 4;
+            }
+            button{
+                margin-left: 33%;
+                font-size: 20px;
+                padding: 8px;
+                border: none;
+                background-color:#49cc9a;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: aliceblue;
+            }
+        </style>
+    </head>
+    <body style="background: url(static\flowers.jpg);">
+        <div class="container">
+            <span><img src='static\flowers.jpg' alt="flowers" height="550px" ></span>
+            <span>
+            <h1> IRIS FLOWER DETECTION </h1><br>
+
+        
+        <form method="POST", action="{{url_for('home')}}">
+        <b>Sepal Length:<input type="text", name='a' required> <br><br>
+        Sepal Width :  <input type="text", name='b' required> <br><br>
+        Petal Length:  <input type="text", name='c' required> <br><br>
+        Petal Width:       
+        <input type="text", name='d'max-width="180px" required> <br><br><br></b>
+            <button type="submit">Predict!</button>
+        </form>
+            </span>
+        </div>
+        <div class="footer">
+            <p><pre>
+                
+        IRIS Flower has three species:Setosa,Versicolor and Virginica which differs
+                    according to their measurements.
+                
+                </pre>
+            </p>
+        </div>
+        
+
+    </body>
+</html>
